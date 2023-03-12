@@ -7,5 +7,5 @@ hellomake: 19050111065.c hellofunc.c
 deletehellomake:
 	rm hellomake
 
-run:
+runhellomake:
 	./hellomake
