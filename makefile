@@ -6,15 +6,19 @@ Object = 19050111065.o hellofunc.o
 %.o: %.c $(Dependancy)
 	$(CCompiler) -c -o $@ $< $(CurrentDirectory)
 
-hellomake: $(Object)
+19050111065: $(Object)
 	mkdir build
 	$(CCompiler) -o $@ $^ $(CurrentDirectory)
-	mv hellomake build
+	mv $@ build
 	mv 19050111065.o build
 	mv hellofunc.o build
 
-deletehellomake:
+clear:
 	rm -r build
+	rm output.txt
 
-runhellomake:
-	./build/hellomake
+run: 
+	./build/19050111065 5 6 output.txt
+
+output:
+	cat output.txt

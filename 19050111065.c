@@ -1,3 +1,4 @@
+#include <hellomake.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -30,12 +31,7 @@ int main(int argc, char *argv[]) {
         vector[i] = randDouble();
     }
 
-    double* result = (double*)malloc(vector_size * sizeof(double));
-    for(i = 0; i < x; i++){
-        for(j = 0; j < y; j++){
-            result[i] += matrix[i][j] * vector[j];
-        }
-    }
+    double* result = matrixVectorMultiplication(matrix, vector, x, y);
     
     for(i = 0; i < x;i++){
         fprintf(fp, "%lf\n", result[i]);
@@ -43,6 +39,8 @@ int main(int argc, char *argv[]) {
     fclose(fp);
 
     return 0;
+
+    
 }
 
 double randDouble(){
@@ -52,4 +50,3 @@ double randDouble(){
     double number = ((double) rand() / RAND_MAX) * (max - min) + min;
     return number;
 }
-
