@@ -1,3 +1,2 @@
 # CENG342
-Parallel Programming \n
-Previous homeworks in commits
+Parallel Programming Homeworks. Previous homeworks in commits.
