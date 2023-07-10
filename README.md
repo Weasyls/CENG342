@@ -1,3 +1,3 @@
 # CENG342
-Parallel Programming Homeworks
+Parallel Programming \n
 Previous homeworks in commits
